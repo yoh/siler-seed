@@ -1,0 +1,35 @@
+{
+    "name": "yoh/siler-seed",
+    "type": "project",
+    "require": {
+        "leocavalcante/siler": "^1.6",
+        "catfan/medoo": "^1.7",
+        "robmorgan/phinx": "^0.10.8",
+        "twig/twig": "^2.11",
+        "vlucas/valitron": "^1.4",
+        "twig/extensions": "^1.5",
+        "yoh/siler-ext": "dev-master"
+    },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/yoh/siler-ext"
+    }],
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "serve": "php -S 0.0.0.0:8002 -t public"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "config": {
+        "process-timeout":0
+    }
+}
